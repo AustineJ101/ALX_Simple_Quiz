@@ -1,3 +1,9 @@
+if(userAnswer === correctAnswer){
+  feedback.textContent = "Correct! Well done.";
+}else{
+  feedback.textContent = "That's incorrect. Try again!";
+}
+
 function checkAnswer(){
   let correctAnswer = "4";
 
