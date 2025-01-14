@@ -1,9 +1,3 @@
-if(userAnswer === correctAnswer){
-  feedback.textContent = "Correct! Well done.";
-}else{
-  feedback.textContent = "That's incorrect. Try again!";
-}
-
 function checkAnswer(){
   let correctAnswer = "4";
 
@@ -19,6 +13,6 @@ function checkAnswer(){
 
 }
 
-const submitBtn = document.querySelector("#submit-answer");
+const submitAnswer = document.querySelector("#submit-answer");
 
-submitBtn.addEventListener("click", checkAnswer);
+submitAnswer.addEventListener("click", checkAnswer);
