@@ -7,14 +7,16 @@ function checkAnswer(){
   let userAnswer = selectedInput.value || null;
 
   const feedback = document.querySelector("#feedback");
-
+  if(userAnswer){
     if (userAnswer === correctAnswer){
       feedback.textContent = "Correct! Well done.";
     } else{
       feedback.textContent = "That's incorrect. Try again!";
     }
+  }
+    
 }
 
-const submitAnswer = document.querySelector("#submit-answer");
+const submitAnswer = document.getElementById("submit-answer");
 
 submitAnswer.addEventListener("click", checkAnswer);
