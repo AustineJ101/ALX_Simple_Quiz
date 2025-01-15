@@ -1,19 +1,12 @@
-let quizContainer = document.querySelector("#quiz-container");
-
-let userAnswer = null;
-
-quizContainer.addEventListener("click",  (event) => {
-  let target = event.target;
-
-  if(target.name === "quiz"){
-    userAnswer = target.value;
-  }
-});
-
-const feedback = document.querySelector("#feedback");
-
 function checkAnswer(){
   const correctAnswer = "4";
+
+  const selectedInput = document.querySelector("[name = 'quiz']:checked");
+
+
+  let userAnswer = selectedInput.value || null;
+
+  const feedback = document.querySelector("#feedback");
 
   if(userAnswer){
     if(userAnswer === correctAnswer){
